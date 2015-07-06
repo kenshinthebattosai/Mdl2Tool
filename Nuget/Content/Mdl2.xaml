@@ -189,6 +189,7 @@
     <x:String x:Key="EraserColor1">&#xE82B;</x:String>
     <x:String x:Key="EraserColor2">&#xE82C;</x:String>
     <x:String x:Key="Exclamation">&#xE171;</x:String>
+    <x:String x:Key="Feedback">&#xE939;</x:String>
     <x:String x:Key="File">&#xE132;</x:String>
     <x:String x:Key="FileHiddenOutline">&#xE295;</x:String>
     <x:String x:Key="FileMultiple">&#xE16F;</x:String>
