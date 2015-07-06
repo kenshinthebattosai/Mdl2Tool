@@ -191,6 +191,7 @@ namespace Mdl2Tool
         public static string EraserColor1 => "&#xE82B;";
         public static string EraserColor2 => "&#xE82C;";
         public static string Exclamation => "&#xE171;";
+        public static string Feedback => "&#xE939;";
         public static string File => "&#xE132;";
         public static string FileHiddenOutline => "&#xE295;";
         public static string FileMultiple => "&#xE16F;";
