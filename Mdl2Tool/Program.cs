@@ -1,32 +1,35 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using Humanizer;
 using Newtonsoft.Json;
-using System.Collections;
-using System;
 
 namespace Mdl2Tool
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             TemplarianItems items;
             using (TextReader tr = new StreamReader(@"Templarian.json"))
             {
                 var json = tr.ReadToEnd();
-
                 items = JsonConvert.DeserializeObject<TemplarianItems>(json);
             }
 
-            var actualItems = items.Items.Where(x => !x.Keywords.Contains("duplicate") && x.Name != "name" && x.Name != "unknown").Distinct(new NameComparer()).ToList();
-
-            var list = actualItems.Select(x => new TemplarianClass {Code = "&#x" + x.Code + ";", Name = GetName(x.Name)}).OrderBy(x => x.Name).ToList();
+            var actualItems =
+                items.Items.Where(x => !x.Keywords.Contains("duplicate") && x.Name != "name" && x.Name != "unknown")
+                    .Distinct(new NameComparer())
+                    .ToList();
+            var list = actualItems.OrderBy(x => x.Name).ToList();
+            foreach (var item in list)
+            {
+                item.Name = GetName(item.Name);
+            }
 
             var sb = CreateCsFile(list);
-            
+
             WriteToFile(@"..\..\..\Nuget\Content\Mdl2.cs", sb.ToString());
 
             sb = CreateXamlFile(list);
@@ -42,7 +45,7 @@ namespace Mdl2Tool
 
             foreach (var item in list)
             {
-                sb.AppendLine(string.Format("    <x:String x:Key=\"{0}\">{1}</x:String>", item.Name, item.Code));
+                sb.AppendLine(string.Format("\t<x:String x:Key=\"{0}\">&#x{1};</x:String>", item.Name, item.Code));
             }
 
             sb.AppendLine("</ResourceDictionary>");
@@ -55,15 +58,15 @@ namespace Mdl2Tool
             var sb = new StringBuilder();
             sb.AppendLine("namespace Mdl2Tool");
             sb.AppendLine("{");
-            sb.AppendLine("    public class Mdl2");
-            sb.AppendLine("    {");
+            sb.AppendLine("\tpublic class Mdl2");
+            sb.AppendLine("\t{");
 
             foreach (var item in list)
             {
-                sb.AppendLine(string.Format("        public static string {0} => \"{1}\";", item.Name, item.Code));
+                sb.AppendLine(string.Format("\t\tpublic static string {0} => \"\\u{1}\";", item.Name, item.Code));
             }
 
-            sb.AppendLine("    }");
+            sb.AppendLine("\t}");
             sb.AppendLine("}");
             return sb;
         }
@@ -85,11 +88,13 @@ namespace Mdl2Tool
             {
                 sr.Write(content);
             }
-        }        
+        }
     }
 
     internal class NameComparer : IEqualityComparer<TemplarianClass>
     {
+        #region Other
+
         public bool Equals(TemplarianClass x, TemplarianClass y)
         {
             return x.Name.Equals(y.Name);
@@ -99,5 +104,7 @@ namespace Mdl2Tool
         {
             return obj.Name.GetHashCode();
         }
+
+        #endregion
     }
 }
