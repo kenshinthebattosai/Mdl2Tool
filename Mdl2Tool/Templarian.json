@@ -245,7 +245,7 @@
 		{'code':'E1BD', name: 'name', keywords: ['language'] },
 		{'code':'E1BE', name: 'name', keywords: ['language'] },
 		{'code':'E1BF', name: 'sidebar-left-collapse', keywords: [] },
-		{'code':'E1C0', name: 'sidebar-left--expand', keywords: [] },
+		{'code':'E1C0', name: 'sidebar-left-expand', keywords: [] },
 		{'code':'E1C2', name: 'edit', keywords: ['duplicate'] },
 		{'code':'E1C3', name: 'home-tree', keywords: ['house'] },
 		{'code':'E1C4', name: 'map-location', keywords: ['map', 'location', 'pin'] },
