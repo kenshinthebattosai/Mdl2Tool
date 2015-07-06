@@ -178,9 +178,12 @@ namespace Mdl2Tool
 		public static string Email => "\uE119";
 		public static string EmailAddress => "\uE168";
 		public static string EmailForward => "\uE120";
+		public static string EmailForward => "\uE89C";
 		public static string EmailForwardRtl => "\uE1A8";
+		public static string EmailForwardRtl => "\uEA56";
 		public static string EmailOpened => "\uE166";
 		public static string EmailReply => "\uE172";
+		public static string EmailReply => "\uE8CA";
 		public static string EmailReplyall => "\uE165";
 		public static string EmailReplyallRtl => "\uE1F2";
 		public static string EmailReplyRtl => "\uE1AF";
@@ -207,6 +210,7 @@ namespace Mdl2Tool
 		public static string Flashlight => "\uE754";
 		public static string Folder => "\uE188";
 		public static string FolderMove => "\uE19C";
+		public static string FolderMove => "\uE8DE";
 		public static string FolderOutline => "\uE8B7";
 		public static string FolderPlus => "\uE1DA";
 		public static string FolderRefresh => "\uE1DF";
@@ -234,6 +238,7 @@ namespace Mdl2Tool
 		public static string HeartOutline => "\uE006";
 		public static string HeartPulse => "\uE95E";
 		public static string Help => "\uE11B";
+		public static string Help => "\uE897";
 		public static string Home => "\uEA8A";
 		public static string HomeOutline => "\uE10F";
 		public static string HomeTree => "\uE1C3";
@@ -311,7 +316,9 @@ namespace Mdl2Tool
 		public static string MessageVideo => "\uE13B";
 		public static string Microphone => "\uE1D6";
 		public static string Minus => "\uE108";
+		public static string Minus => "\uE949";
 		public static string Monitor => "\uE7F4";
+		public static string Monitor => "\uE7FB";
 		public static string MonitorDuplicate => "\uE7F9";
 		public static string MonitorExtend => "\uE7FA";
 		public static string MonitorSound => "\uE7F3";
@@ -343,6 +350,7 @@ namespace Mdl2Tool
 		public static string PinLeft => "\uE141";
 		public static string PinLeftColor => "\uE841";
 		public static string Plus => "\uE109";
+		public static string Plus => "\uE948";
 		public static string PlusMinus => "\uE94D";
 		public static string Printer => "\uE2F6";
 		public static string Printer3d => "\uE2F7";
@@ -378,7 +386,7 @@ namespace Mdl2Tool
 		public static string Share => "\uE72D";
 		public static string Shuffle => "\uE14B";
 		public static string SidebarLeftCollapse => "\uE1BF";
-		public static string SidebarLeft_expand => "\uE1C0";
+		public static string SidebarLeftExpand => "\uE1C0";
 		public static string SidebarRightCollapse => "\uE126";
 		public static string SidebarRightExpand => "\uE127";
 		public static string Signal1 => "\uE86C";
@@ -420,7 +428,10 @@ namespace Mdl2Tool
 		public static string Tram => "\uEB4D";
 		public static string TramOutline => "\uE7C0";
 		public static string Translate => "\uE164";
+		public static string Translate => "\uE8C1";
 		public static string Undo => "\uE10E";
+		public static string Undo => "\uE845";
+		public static string Undo => "\uE97A";
 		public static string Unlock => "\uE1F7";
 		public static string Upload => "\uE11C";
 		public static string Uppercase => "\uE84B";
