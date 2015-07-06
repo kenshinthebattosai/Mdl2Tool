@@ -807,7 +807,7 @@
 		{'code':'E936', name: 'name', keywords: [] },
 		{'code':'E937', name: 'name', keywords: [] },
 		{'code':'E938', name: 'name', keywords: [] },
-		{'code':'E939', name: 'name', keywords: [] },
+		{'code':'E939', name: 'feedback', keywords: [] },
 		{'code':'E943', name: 'name', keywords: [] },
 		{'code':'E944', name: 'name', keywords: [] },
 		{'code':'E945', name: 'flash', keywords: ['lightning'] },
