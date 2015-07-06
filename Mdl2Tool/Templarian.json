@@ -1,4 +1,4 @@
-﻿{'items':[
+{'items':[
 		{'code':'E001', name: 'check', keywords: ['checkmark', 'check', 'mark'] },
 		{'code':'E002', name: 'checkbox-blank', keywords: ['solid', 'box'] },
 		{'code':'E003', name: 'checkbox-blank-outline', keywords: [] },
